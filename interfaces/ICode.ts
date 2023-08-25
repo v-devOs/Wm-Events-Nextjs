@@ -1,7 +1,7 @@
 
 export interface ICode{
   code:          string
-  name:          string
+  name?:          string
   attendace:     boolean
   isRegister:    boolean
 }

@@ -4,13 +4,15 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.idea
 # testing
 /coverage
 
 # next.js
 /.next/
 /out/
+mongo
+
 
 # production
 /build
