@@ -7,17 +7,17 @@ const HomePage = () => {
       <form>
         <div className="container-form-inputs">
           <div className="user-box">
-            <input autoFocus placeholder='WM-Events'/>
+            <input autoFocus placeholder='WM-Events' />
             <label>Nombre y Apellidos</label>
           </div>
           <div className="user-box">
-            <input placeholder='12345'></input>
+            <input placeholder='12345' ></input>
             <label>Codigo de preventa</label>
           </div>
         </div>
 
         <div className="container-form-btn">
-          <button type='submit'>Registrar codigo</button>
+          <button type='submit' className='border-radius-in'>Registrar codigo</button>
         </div>
       </form>
     </AuthLayout>

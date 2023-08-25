@@ -14,9 +14,11 @@ export const AuthLayout: FC<Props> = ({ children, desc, title }) => {
         <title>{ title }</title>
       </Head>
 
-      <main className='flex jst-content'>
-        <div className="container-form">
-          <div className="container-from-title">{ title }</div>
+      <main className='flex center-content container'>
+        <div className="container-form p-30 border-radius-ex">
+          <div className="container-from-title mb-15 txt-center">
+            <h1 className="dark-color">{ title }</h1>
+          </div>
           { children }
         </div>
       </main>
