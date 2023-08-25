@@ -17,7 +17,7 @@ const HomePage = () => {
         </div>
 
         <div className="container-form-btn">
-          <button type='submit' className='border-radius-in'>Registrar codigo</button>
+          <button type='submit'>Registrar codigo</button>
         </div>
       </form>
     </AuthLayout>

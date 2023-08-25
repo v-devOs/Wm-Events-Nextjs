@@ -14,7 +14,7 @@ const AdminPage = () => {
         </div>
 
         <div className="container-form-btn">
-          <button type='submit'  className='border-radius-in'>Iniciar sesion</button>
+          <button type='submit'>Iniciar sesion</button>
         </div>
       </form>
     </AuthLayout>

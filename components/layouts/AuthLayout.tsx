@@ -1,5 +1,6 @@
 import { FC, ReactNode } from "react"
 import Head from "next/head"
+import Image from "next/image"
 
 interface Props{
   children: ReactNode
@@ -13,6 +14,15 @@ export const AuthLayout: FC<Props> = ({ children, desc, title }) => {
       <Head>
         <title>{ title }</title>
       </Head>
+
+      <div className="container-img-wm flex center-content">
+        <Image
+          src='/images/wm-logo3.png'
+          alt="WM - Logo"
+          width={300}
+          height={300}
+        />
+      </div>
 
       <main className='flex center-content container'>
         <div className="container-form p-30 border-radius-ex">
