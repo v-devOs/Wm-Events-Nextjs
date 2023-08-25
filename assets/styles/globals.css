@@ -5,6 +5,7 @@
   --secondary-color: #181818;
   --white-color: #fff;
   --contrast-color: #543884;
+  --error-color: #F44336;
 }
 
 *{
@@ -28,6 +29,18 @@ button{
   border-radius: 5px;
 }
 
+button:disabled{
+  opacity: 0.5;
+}
+
+.chip-error{
+  width: 100%;
+  color: var(--white-color);
+  background-color: var(--error-color);
+  height: 30px;
+  align-items: center;
+  padding: 2px;
+}
 
 .container{
   width: 100%;
@@ -41,11 +54,15 @@ button{
   margin-bottom: 15px;
 }
 
+.mt-15{
+  margin-top: 15px;
+}
+
 .border-radius-ex{
   border-radius: 10px;
 }
 
-.border-radius-in{
+.border-radius-in, .chip-error{
   border-radius: 5px;
 }
 
