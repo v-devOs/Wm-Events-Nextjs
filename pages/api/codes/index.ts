@@ -12,9 +12,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
       return getCodesFromDatabase( req, res )
     case 'POST':
       return setCodesInDatabase( req, res )
-
-    case 'PATCH':
-      return aupdateCodeInDatabse( req, res )
+    case 'PUT':
+      return updateCodeInDatabse( req, res )
     case 'DELETE':
       return deleteCodesFromDatabase( req, res )
   
@@ -48,16 +47,7 @@ const setCodesInDatabase = async(req: NextApiRequest, res: NextApiResponse<Data>
 }
 
 
-const deleteCodesFromDatabase = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
-  
-  const resp = await codes.deleteAllCodes()
-
-  return resp
-   ? res.status(200).json({ message: 'Codigos eliminados correctamente' })
-   : res.status(500).json({ message: 'Error del servidor al eliminar los codigos'})
-}
-
-const aupdateCodeInDatabse = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
+const updateCodeInDatabse = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
   
   const { code, name } = req.body as { code: string, name: string }
 
@@ -68,3 +58,11 @@ const aupdateCodeInDatabse = async(req: NextApiRequest, res: NextApiResponse<Dat
     : res.status(400).json({ message: 'Error al actualizar codigo' })
 }
 
+const deleteCodesFromDatabase = async(req: NextApiRequest, res: NextApiResponse<Data>) => {
+  
+  const resp = await codes.deleteAllCodes()
+
+  return resp
+   ? res.status(200).json({ message: 'Codigos eliminados correctamente' })
+   : res.status(500).json({ message: 'Error del servidor al eliminar los codigos'})
+}

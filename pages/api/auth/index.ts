@@ -16,7 +16,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
 
 const checkCredentials = (req: NextApiRequest, res: NextApiResponse<Data>) => {
 
-  const { password, verifySuperAdmin } = req.body as { password: string, verifySuperAdmin: boolean }
+  const { password, verifySuperAdmin } = req.body as { password: string, verifySuperAdmin: string }
 
   const resp = credentials.checkCredentials(password, verifySuperAdmin)
 

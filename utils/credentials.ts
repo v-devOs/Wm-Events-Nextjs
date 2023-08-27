@@ -1,8 +1,6 @@
-export const checkCredentials =  ( password: string, verifySuperAdmin: boolean ) => {
+export const checkCredentials =  ( password: string, verifySuperAdmin: string ) => {
   
-  let isValidCredeantials = false
-
-  const passwordToCompare = verifySuperAdmin
+  const passwordToCompare = verifySuperAdmin !== 'yes'
     ? process.env.ADMIN_PASSWORD || ''
     : process.env.SUPER_ADMIN_PASSWORD || ''
 
